@@ -1,0 +1,15 @@
+.contact_div {
+    display: block;
+    justify-content: center;
+    margin: 5px auto;
+    border-radius: 5px;
+    border-style: solid;
+    width: 80%;
+}
+
+.contact_label {
+    margin-top: 25px;
+    margin: 5px auto;
+    text-align: left;
+    width: 80%
+}
