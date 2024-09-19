@@ -1,43 +1,40 @@
-import React from "react";
-import { Form, Row } from "react-bootstrap";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './contact.css'
 
-function Contact () {
-    return (
-        <div className="contact_div">
-            <h1>Contact Page</h1>
-            <h6>Want to reach out with a message about hiring, 
-                collaboration or friendship here is where to start!
-                </h6>
-                <Form>
-      <Form.Group className="mb-3" controlId="contact_name">
-        <Form.Label className="contact_label">
-          Name :
-        </Form.Label> 
-          <Form.Control className="contact_label" type="text" placeholder="Place your name" />
-      </Form.Group>
+export const Contact = () => {
+  const form = useRef();
 
-      <Form.Group className="mb-3" controlId="contact_email">
-            <Form.Label className="contact_label" >
-            Email :
-            </Form.Label><br></br>
-          <Form.Control className="contact_label"  type="email" placeholder="Place your e-mail" /> 
-      </Form.Group>
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-      <Form.Group className="mb-3" controlId="contact_title">
-        <Form.Label className="contact_label">
-          Title :
-        </Form.Label>
-        <Form.Control className="contact_label"  type="text" placeholder="Title of the message" />
-      </Form.Group>
+    emailjs
+      .sendForm('service_l143pmm', 'template_5kqfji8', form.current, {
+        publicKey: 'DUYsx23QIhZ6s03EG',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
-      <Form.Group className="mb-3" controlId="contact_message">
-        <Form.Label className="contact_label">Message :</Form.Label> 
-        <Form.Control className="contact_label"  as="textarea" rows={3} />
-      </Form.Group>
-      </Form>
-        </div>
-    )
-}
+  return (
+    <form className='contact_div' ref={form} onSubmit={sendEmail}>
+         <h1 className='header_text'>Contact Form</h1>
+    <h4>Here you can contact me</h4>
+      <label className="contact_label">Name</label> <br></br>
+      <input className="contact_label label_height" type="text" name="user_name" /><br></br>
+      <label className="contact_label">Email</label><br></br>
+      <input className="contact_label label_height" type="email" name="user_email" /><br></br>
+      <label className="contact_label">Message</label><br></br>
+      <textarea className="contact_label text_area_size" name="message" /><br></br>
+      <input type="submit" value="Send" /><br></br>
+    </form>
+  );
+};
 
-export default Contact;
+export default Contact

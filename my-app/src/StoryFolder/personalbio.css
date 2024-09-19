@@ -12,6 +12,7 @@
 }
 
 .group {
+    width: 80%;
     margin-top: 25px;
     display: flex;
     align-items: center;

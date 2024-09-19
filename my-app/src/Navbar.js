@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Paul Julmeus</Navbar.Brand>
+        <Navbar.Brand href="/">Paul Julmeus</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -19,7 +19,7 @@ function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>    
           </Nav>
-          <Nav.Link className='contact_end' href="#home">Contact</Nav.Link>
+          <Nav.Link className='contact_end' href="/contact">Contact</Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
