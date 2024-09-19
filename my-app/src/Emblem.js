@@ -13,7 +13,9 @@ function Emblem () {
 <a href="https://github.com/pjulmeus" target="_blank" rel="noopener noreferrer">
     <FontAwesomeIcon icon={faGithub} size="2x"/>
     </a>
+    <a href="https://docs.google.com/document/d/19H_0ImyG_tfwBIvPXlIOC1lsr70vVaXt/view" >
     <FontAwesomeIcon icon={faFileArrowDown} size="2x"/>
+    </a>
         </div>
     )
 }
