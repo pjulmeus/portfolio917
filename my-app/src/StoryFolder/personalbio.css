@@ -1,0 +1,20 @@
+.bio_text {
+    font-size: 3vh;
+    font-size: 5vh;
+    font-weight: 800;
+    /* text-align: left; */
+    /* margin-left: 50px; */
+}
+
+.bio_picture {
+    /* margin-right: -100px; */
+    
+}
+
+.group {
+    width: 80%;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

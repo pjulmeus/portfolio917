@@ -1,0 +1,29 @@
+.header_text {
+    margin-top: 5vh;
+}
+
+.contact_div {
+
+    display: block;
+    justify-content: center;
+    margin: 5vh auto;
+    border-radius: 5px;
+    border-style: solid;
+    width: 80%;
+    height: 100vh;
+}
+
+.contact_label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 80%
+}
+
+.text_area_size {
+    height: 40vh;
+}
+
+.label_height {
+    height: 5vh;
+}
