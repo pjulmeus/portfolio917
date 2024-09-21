@@ -1,5 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+/* Styles for mobile screens (max-width 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .header {
+    font-size: 20px;
+  }
+}
 
 .App {
   text-align: center;
@@ -11,4 +22,13 @@ body {
   color: #a2eadd;
 }
 
+/* @media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
 
+  .header {
+    font-size: 20px;
+  }
+} */
