@@ -11,7 +11,7 @@ return (
     <div className="right_side">
 Legacy JavaScript Algorithms and Data Structures Certification</div>
     <a className="right-side" href="https://www.freecodecamp.org/certification/fcc8380af88-0c87-4959-b7f7-930f7dcdc227/javascript-algorithms-and-data-structures" >
-        <Button variant="right_side" >Submit</Button>
+        <Button variant="right_side aqua" >Submit</Button>
         </a>
   </Stack>
 )

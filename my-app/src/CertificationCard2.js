@@ -9,7 +9,7 @@ return (
     <Stack className="stack_space" gap={1} direction="horizontal">
     <div className="left_side">University of South Florida</div>
     <div className="right_side">Software Engineering Fellowship</div>
-    <a href="https://images.credential.net/embed/v0lpzuln.png"><Button variant="right_side">Submit</Button></a>
+    <a href="https://images.credential.net/embed/v0lpzuln.png"><Button variant="right_side aqua ">Submit</Button></a>
   </Stack>
 )
 }

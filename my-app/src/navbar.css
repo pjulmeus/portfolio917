@@ -1,3 +1,12 @@
 .contact_end {
     justify-content: flex-end;
 }
+
+.black_letters {
+    color: black;
+    font-weight: 500;
+}
+
+.background_color {
+    background-color: #669a9b;
+}
