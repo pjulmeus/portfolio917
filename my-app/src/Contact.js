@@ -1,20 +1,23 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './contact.css'
 
 export const Contact = () => {
   const form = useRef();
+  const navigate = useNavigate();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_l143pmm', 'template_5kqfji8', form.current, {
-        publicKey: 'DUYsx23QIhZ6s03EG',
+      .sendForm(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, form.current, {
+        publicKey: process.env.REACT_APP_YOUR_PUBLIC_KEY,
       })
       .then(
         () => {
           console.log('SUCCESS!');
+          navigate("/")
         },
         (error) => {
           console.log('FAILED...', error.text);
