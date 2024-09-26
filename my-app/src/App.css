@@ -9,23 +9,35 @@ body {
   font-family: "Bitter", serif;
   background-color: #2b445e;
   color: #a2eadd;
-  min-width: 480px;
+  min-width: 580px;
 }
 
   /* Styles for larger screens (desktops, min-width 769px) */
   /* Mobile view */
-@media (max-width: 480px) {
-  .grid-container {
-      grid-template-columns: 1fr; /* 1 column */
-      background-color: blue;
-  }
-  body {
-    font-family: "Bitter", serif;
-    font-size: 4vh;
-    /* background-color: #2b445e;
-    color: blue; */
-    min-width: 480px;
-    
-  }
+  @include media-breakpoint-up(lg) { 
+    .grid-container {
+        /* grid-template-columns: 1fr; 1 column */
+        background-color: yellow;
+    }
+    body {
+      font-family: "Bitter", serif;
+      font-size: 2vh;
+      background-color: #2b445e;
+      color: blue;
+    }
+   }
+
+   @include media-breakpoint-up(sm, md) { 
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column */
+        background-color: yellow;
+    }
+    body {
+      font-family: "Bitter", serif;
+      font-size: 2vh;
+      background-color: #2b445e;
+      color: blue;
+    }
+   }
   
-}
+

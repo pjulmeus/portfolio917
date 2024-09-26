@@ -12,9 +12,10 @@ function App() {
 
   return ( 
     <ThemeProvider
-      breakpoints={['sm', 'md', 'lg', 'xl']} // Customize breakpoints
+    breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
+    minBreakpoint="xxs" 
     >
-    <div className="App grid-container">
+    <div className="App grid-container sm lg">
       <NavBar/>
         <Routes>
             <Route path="/" element={<Home />} />
